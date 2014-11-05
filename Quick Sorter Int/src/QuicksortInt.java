@@ -10,7 +10,7 @@ public class QuicksortInt
 	private static void qs(int items[], int left, int right)
 		{
 		int i, j;
-		int pivot, y;
+		int pivot, temp;
 		i = left;
 		j = right;
 		pivot = items [(left + right) / 2];
@@ -29,9 +29,9 @@ public class QuicksortInt
 				
 			if (i <= j)
 				{
-				y = items [i];
+				temp = items [i];
 				items [i] = items [j];
-				items [j] = y;
+				items [j] = temp;
 				i++;
 				j--;
 				}
@@ -42,6 +42,7 @@ public class QuicksortInt
 			{
 			qs (items, left, j);
 			}
+		
 		if (i < right)
 			{
 			qs (items, i, right);
