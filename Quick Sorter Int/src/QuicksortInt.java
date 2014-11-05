@@ -2,9 +2,10 @@
 public class QuicksortInt
 	{
 
-	static void qsort(int items[])
+	static int [ ] qsort(int items[])
 		{
 		qs(items, 0, items.length - 1);
+		return items;
 		}
 	
 	private static void qs(int items[], int left, int right)
