@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
+import java.util.Arrays;
 
 public class QuicksortIntTest extends QuicksortInt
 	{
@@ -9,6 +10,11 @@ public class QuicksortIntTest extends QuicksortInt
 	@Test
 	public void test()
 		{
+		//Method 1: hard-coding
 		assertArrayEquals(sortedA, QuicksortInt.qsort(a));
+		//Method 2: trusting built-in sorter
+		Arrays.sort(a);
+		assertArrayEquals(a, QuicksortInt.qsort(a));
 		}
 	}
+
